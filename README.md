@@ -1,35 +1,13 @@
 # demoSocketsJuego
 
-This template should help get you started developing with Vue 3 in Vite.
+Aquesta demo consta de dos parts:
+- un servidor node.js (a la carpeta nodeapp)
+- un client fet amb vue.js
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Funcionament del client
 
-## Customize configuration
+A la ruta /juego s'executa un client que es connecta al servidor de sockets. L'usuari pot demanar unir-se al joc. 
+Cada vegada que un client s'uneix a la partida el servidor el registra al array de jugadors i avisa a tothom que s'hagi unit previament. 
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+Un cop hi han 2 jugados units, el servidor envia un compte enrrera i comença el joc. 
